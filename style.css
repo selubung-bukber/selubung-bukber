@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/digital');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* background-color  */
+
+  --Bg-color-main: #202023;
+
+  --Bg-color-second: #303443;
+  --Bg-color-third: #181a21;
+  --text-color--main: floralwhite;
+
+  /* font option  */
+
+  --font-main: system-ui;
+  --font-second: verdana;
+  --font-third: Georgia;
+  --font-size-text: 18px;
+  --font-size-subtext: 14px;
+  --font-size-custom: 20px;
+  /* margin padding option  */
+
+  --margin-x: 0 1em;
+  --margin-y: 1em 0;
+  /* animation option   */
+  --animate-main: 2s ease-in-out linear alternate;
+  --animate-main: 1s ease alternate;
+
+  /* *root layout */
+  --hero-gap: 60px;
+
+}
+
+
+body {
+    font-family: "Lora", serif;
+}
+
+/* text */
+
+
+h1 {
+    font-size: calc(0.5rem + 8vmin);
+    font-weight: 600;
+    font-style: italic;
+}
+
+h2 {
+    font-size: calc(0.8rem + 4vmin);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+h3 {
+    font-style: italic;
+    color: royalblue;
+}
+
+strong {
+    font-size: xx-large;
+    font-style: oblique;
+    color: royalblue;
+}
+
+p {
+    font-size: calc(0.8rem + 1.25vmin);
+    line-height: 1.65;
+}
+
+/* gambar halaman utama */
+
+.parallax-wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 10px;
+}
+
+.parallax-content {
+    background: #000;
+    position: relative;
+    width: 100%;
+    height: calc(109vh - var(--hero-gap));
+    margin-bottom: 1em;
+}
+
+.liontin {
+    width: 90px;
+    position: absolute;
+    top: 0;
+}
+
+.liontin[alt="1"] {
+    right: 0;
+    width: 100px;
+    top: -1em;
+    z-index: 1;
+}
+
+.liontin[alt="2"] {
+    right: 1em;
+    width: 120px;
+}
+
+.selubung {
+    /* scale: .5; */
+    width: 300px;
+    backface-visibility: visible;
+    animation: 2s ease-in-out 0s 1 normal both running flip-down-animation;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*  */
+.main-content {
+    position: relative;
+    margin: 0 auto;
+    padding: var(--hero-gap) 2rem;
+    max-width: 725px;
+    background-color: white;
+}
+
+.main-content>*+* {
+    margin-top: 1rem;
+}
+
+/*  */
+.content-satu {
+    position: relative;
+    background: #8bc2d35e;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.icons{ 
+    /* ini gambar rangkulan*/
+    display: grid;
+    place-items: center;
+    padding-top: 1em;
+}
+
+
+/*  */
+.content-dua {
+    line-height: 5;
+}
+
+.info{
+    margin-top: 1em;
+}
+
+/*  */
+
+/*  ini gambar manipulasi*/
+.content-tiga{
+    display: flex;
+    justify-content: center;
+}
+.content-tiga img {
+    height: 200px;
+}
+
+/*  */
+details p{
+    background: skyblue;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+details img[alt="kribo"]{
+    position: relative;
+    top: 1.5em;
+    left: 14em;
+}
+
+details img[alt="sodik"]{
+    position: relative;
+    top: 1.5em;
+    left: 3em;
+}
+
+summary{
+    color: rosybrown;
+}
+
+
+/* * ini container component coutdown date */
+.card {
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Digital';
+}
+
+.card:hover{
+    /* transform: scale(1.7); */
+    transition: 15s ease-in-out alternate;
+}
+
+button {
+    padding: .5em;
+    background: cornflowerblue;
+    border-radius: 10px;
+}
+
+button:hover{
+    padding: 1em;
+    transition: var(--animate-main);
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* footer */
+footer {
+    display: grid;
+    place-content: center;
+    background: lightgreen;
+    padding: 2em;
+    color: darkgreen;
+}
+/* <!-- ======================================{here}============================================================== --> */
+
+
+/* todo Media query phone*/
+@media (min-width:320px)and (max-width:481px){
+
+    .selubung{
+        width: 200px;
+    }
+
+    details img[alt="kribo"] {
+        position: relative;
+        top: 1.5em;
+        left: 6em;
+    }
+
+    details img[alt="sodik"] {
+        position: relative;
+        top: 1.5em;
+        left: 0.5em;
+    }
+}
+/* todo Media query tablet*/
+@media (min-width:481px)and(max-width:786px){
+
+}
+        
+/* todo Media query laptop*/
+@media (min-width:769px)and(max-width:1024px){
+    details img[alt="kribo"] {
+        left: 15em;
+    }
+
+    details img[alt="sodik"] {
+        left: 4em;
+    }
+
+    .card .timer{
+        line-height: 2;
+        font-size: larger;
+    }
+
+}
+
+/* todo Media query large*/
+@media (min-width:1025px)and(max-width:1200px){
+
+}
+
+
+/* * Animation */
+
+@keyframes flip-down-animation {
+    0% {
+        transform: perspective(400px) scaleX(1) translateZ(0) rotateX(1turn);
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        transform: perspective(400px) scaleX(1) translateZ(150px) rotateX(190deg);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: perspective(400px) scaleX(1) translateZ(150px) rotateX(170deg);
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateX(0deg);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: perspective(400px) scaleX(1) translateZ(0) rotateX(0deg);
+        animation-timing-function: ease-in;
+    }
+}

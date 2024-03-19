@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<link href="https://fonts.cdnfonts.com/css/digital" rel="stylesheet">
+                
+<style>
+    /* @import url('https://fonts.cdnfonts.com/css/digital');
+    .card {
+        border: 2px solid blueviolet;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        font-family: 'Digital';
+    }
+ */
+body{
+    height: 50vh;
+}
+ .jam {
+    scale: .8;
+    position: relative;
+    top: -2em;
+}
+
+</style>
+</head>
+<body>
+    <div class="jam">
+
+        <div class="card">
+            <custom-countdown end-time="March 29, 2024 00:00:00" date-label="Hari ini :">
+                <!-- <img src="" alt="">-->
+            </custom-countdown>
+        </div>
+
+    </div>
+
+
+<script src="/util/countDown.js" type="module"></script>
+
+</body>
+</html>
