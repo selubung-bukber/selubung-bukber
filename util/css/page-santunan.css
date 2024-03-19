@@ -227,7 +227,7 @@ img.gallery {
 /* *phone */
 @media (min-width: 320px) and (max-width: 480px) {
   .selubung {
-    width: 200px;
+    width: 150px;
   }
 
   .main-content {
@@ -245,6 +245,10 @@ img.gallery {
     background: cornflowerblue;
   }
 
+  .tab-inner {
+    font-size: x-small;
+}
+
   .wrapper-tema {
     top: -1.5rem;
   }
@@ -259,6 +263,18 @@ img.gallery {
     left: 2em;
     top: 3em;
 }
+  
+  iframe {
+    width: auto;
+    height: 250px;
+}
+  .bulan {
+width:100px;
+  }
+
+  .liontin{
+    width:60px;
+  }
 }
 /* *tablet */
 @media (min-width: 481px) and (max-width: 768px) {
@@ -275,12 +291,15 @@ img.gallery {
     top: -2.6rem;
   }
 
-  .pantun{
+    .pantun {
     position: relative;
     left: 5em;
     width: 500px;
-    padding: 1em 0;
-  }
+    top: 3em;
+}
+  .tab-inner {
+    font-size: small;
+}
 }
 /* *Laptop */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -290,10 +309,10 @@ img.gallery {
   }
 
   .pantun {
-    left: 7em;
+    left: 6em;
     position: relative;
-    padding: 1em 0;
-    width: 600px;
+    width: 500px;
+    top: 4em;
 }
 }
 /* *Large Pc */
@@ -313,9 +332,10 @@ img.gallery {
   }
 
   .pantun {
-    left: 28em;
+    left: 29em;
     padding: 1em 0;
   }
+  
 }
 
 @media(min-width:1728px){
